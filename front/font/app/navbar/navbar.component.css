@@ -1,0 +1,12 @@
+.navbar{
+  background-color: #F6FBF9;
+}
+.btn-custom {
+    background-color: #84C7AE;
+    border-color: #84C7AE;
+    color: #ffffff; /* couleur du texte */
+    border-radius:50px;
+  }
+  .a{
+    color: black;
+  }

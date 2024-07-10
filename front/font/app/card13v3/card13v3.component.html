@@ -1,0 +1,47 @@
+
+
+
+
+<div class="margin container-fluid bg-white">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-lg-8 col-md-10">
+      <div class="card p-4 card-container">
+        <div class="card-body text-center card-content">
+          <div class="text-center mb-5">
+            <h1 class="card-title mb-0">État du véhicule</h1>
+          </div>
+          
+          <div class="d-flex align-items-center space-between mb-4">
+            <h5 class="mb-0">Voyez-vous des voyants d'avertissements lumineux allumés en permanence sur le tableau de bord de votre voiture ?</h5>
+          </div>
+          
+          <div class="d-flex align-items-center">
+            <div class="form-group mb-0 flex-grow-1">
+              <div class="custom-border">
+                <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedEtat === 'oui'" (click)="selectRadioEtat('oui')">
+                  <input class="form-check-input" type="radio" name="tableaudebord" id="Permanence1" value="oui" [(ngModel)]="selectedEtat">
+                  <label class="form-check-label radio-label" for="Permanence1">Oui</label>
+                </div>
+                <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedEtat === 'non'" (click)="selectRadioEtat('non')">
+                  <input class="form-check-input" type="radio" name="tableaudebord" id="Permanence2" value="non" [(ngModel)]="selectedEtat">
+                  <label class="form-check-label radio-label" for="Permanence2">Non</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+    
+          
+          
+          
+    
+          <div class="espace"></div>
+    
+          <div class="text-center">
+            <app-precedent [previousRoute]="'card12v3'" [nextRoute]="'card14v3'"></app-precedent>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

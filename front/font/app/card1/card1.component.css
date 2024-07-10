@@ -1,0 +1,85 @@
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+  .card-container {
+    height: 700px; /* Hauteur constante souhaitée pour tous les composants */
+    background-color: #F6FBF9;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-title {
+    font-size: 1.5rem;
+  }
+  .card-container {
+    height: 700px; /* Hauteur constante souhaitée pour tous les composants */
+    background-color: #F6FBF9;
+  }
+}
+
+
+.btn-custom {
+  background-color: #84C7AE;
+  border-color: #84C7AE;
+  color: #ffffff; /* couleur du texte */
+  border-radius:50px;
+}
+
+
+
+
+  .margin{
+    margin-top: 50px;
+    
+    
+  }
+  .card-container {
+    
+    height: 450px; /* Hauteur constante souhaitée pour tous les composants */
+    background-color: #F6FBF9;
+    overflow-y: auto; /* Activation du défilement vertical si nécessaire */
+    overflow-x: hidden; 
+    
+  }
+  .card-container::-webkit-scrollbar {
+    width: 5px; /* Largeur de la barre de défilement */
+  }
+  
+  .card-container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Couleur de l'arrière-plan de la barre de défilement */
+  }
+  
+  .card-container::-webkit-scrollbar-thumb {
+    background: #888; /* Couleur du bouton de défilement */
+    border-radius: 5px; /* Arrondi du bouton de défilement */
+  }
+  
+  .card-container::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Couleur du bouton de défilement au survol */
+  }
+  
+  .space-between {
+    margin-bottom: 20px; 
+ }
+  
+  .space-between {
+    margin-bottom: 20px; 
+  }
+  
+  .back {
+    background-color: white; /* Couleur de fond au survol */
+  }
+  /* Style pour changer la couleur de fond lorsque survolé */
+  
+.back:hover {
+    cursor: pointer;
+    
+  }
+  .selected {
+    background: #e6f2ee;
+    border: 1.5px solid #84C7AE;
+  }
+ 
+  
+ 

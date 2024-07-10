@@ -1,0 +1,66 @@
+<div class="margin container-fluid bg-white">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-lg-8 col-md-10">
+      <div class="card p-4 card-container">
+        <div class="card-body card-content">
+          <div class="card-body">
+            <div class="text-center mb-5">
+              <h1 class="card-title mb-0">État du véhicule</h1>
+            </div>
+            <!-- Date de mise en circulation -->
+            <div class="form-group">
+              <label for="dateMiseEnCirculation">Date de mise en circulation</label>
+              <div class="input-group date" data-provide="datepicker" >
+                <input type="text" class="form-control datepicker" id="dateMiseEnCirculation" placeholder="Sélectionnez une date de mise en circulation"   [(ngModel)]="DateSelect" (change)="updateData()">
+                <div class="input-group-append">
+                  <span class="input-group-text"><i class="fa fa-calendar" ></i></span>
+                </div>
+              </div >
+            </div>
+            <!-- Kilomètres parcourus -->
+            <div class="form-group">
+              <label for="kilometresParcourus">Kilomètres parcourus</label>
+              <input type="number" class="form-control" id="kilometresParcourus" placeholder="Kilomètres parcourus" (change)="KilometresChange()" [(ngModel)]="KilometresSelect">
+            </div>
+            <!-- Année de fabrication -->
+            <div class="form-group">
+              <label for="anneeFabrication">Année de fabrication</label>
+              <div class="input-group date" data-provide="datepicker">
+                <input type="text" class="form-control datepicker" id="anneeFabrication" placeholder="Sélectionnez une année de fabrication"  [(ngModel)]="fabricationSelect" (ngModelChange)="updateData()">
+                
+                  
+              
+                <div class="input-group-append">
+                  <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center">
+              <app-precedent [previousRoute]="getPreviousRoute()" [nextRoute]="getNextRoute()"></app-precedent>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Ajouter les dépendances Bootstrap et Bootstrap Datepicker -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+
+<script>
+  // Initialiser le calendrier avec le format mm.aaaa et en masquant la partie du jour
+  $('.datepicker').datepicker({
+    format: "mm.yyyy",
+    autoclose: true,
+    startView: "months",
+    minViewMode: "months"
+  });
+</script>

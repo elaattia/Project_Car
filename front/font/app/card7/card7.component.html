@@ -1,0 +1,64 @@
+
+
+
+<div class="margin container-fluid bg-white">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-lg-8 col-md-10">
+      <div class="card p-4 card-container">
+        <div class="card-body text-center card-content">
+          <div class="text-center mb-5">
+            <h1 class="card-title mb-0">État du véhicule</h1>
+          </div>
+          
+          <div class="d-flex align-items-center space-between mb-4">
+            <h5 class="mb-0">Nombre de propriétaires</h5>
+          </div>
+        
+          <div class="form-group">
+            <input type="text" class="form-control" id="propriétaires" placeholder="Nombre de propriétaires" [(ngModel)]="selectedNombre" (change)="updateData()">
+          </div>
+    
+          <div class="d-flex align-items-center space-between mb-4">
+            <h5 class="mb-0">Historique d'entretien </h5>
+          </div>
+          
+          <div class="d-flex align-items-center">
+            <div class="form-group mb-0 flex-grow-1">
+              <div class="custom-border">
+                <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedHistorique === 'Entretien régulier maison'" (click)="selectRadioHistorique('Entretien régulier maison')">
+                  <input class="form-check-input" type="radio" name="entretien" id="autoRadio" value="Entretien régulier maison" [(ngModel)]="selectedHistorique">
+                  <label class="form-check-label radio-label" for="autoRadio">Entretien régulier maison</label>
+                </div>
+                <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedHistorique === 'Entretien régulier'" (click)="selectRadioHistorique('Entretien régulier')">
+                  <input class="form-check-input" type="radio" name="entretien" id="manuelRadio" value="Entretien régulier" [(ngModel)]="selectedHistorique">
+                  <label class="form-check-label radio-label" for="manuelRadio">Entretien régulier</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="espace"></div>
+          <div class="d-flex align-items-center">
+            <div class="form-group mb-0 flex-grow-1">
+              <div class="custom-border">
+                <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedHistorique === 'Entretien irrégulier'" (click)="selectRadioHistorique('Entretien irrégulier')">
+                  <input class="form-check-input" type="radio" name="entretien" id="autoRadio" value="Entretien irrégulier" [(ngModel)]="selectedHistorique">
+                  <label class="form-check-label radio-label" for="autoRadio">Entretien irrégulier</label>
+                </div>
+                <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedHistorique === 'Aucun entretien documenté'" (click)="selectRadioHistorique('Aucun entretien documenté')">
+                  <input class="form-check-input" type="radio" name="entretien" id="manuelRadio" value="Aucun entretien documenté" [(ngModel)]="selectedHistorique">
+                  <label class="form-check-label radio-label" for="manuelRadio">Aucun entretien documenté</label>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="espace"></div>
+    
+          <div class="text-center">
+            <app-precedent [previousRoute]="'card6'" [nextRoute]="'card8'"></app-precedent>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

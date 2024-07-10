@@ -1,0 +1,58 @@
+
+
+  
+  <div class="margin container-fluid bg-white">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-8 col-md-10">
+        <div class="card p-4 card-container">
+          <div class="card-body text-center card-content">
+            <div class="text-center mb-5">
+              <h1 class="card-title mb-0">Questions caractéristiques</h1>
+            </div>
+            
+            <!-- Carburant -->
+            <div class="d-flex align-items-center space-between mb-4">
+              <h5 class="mb-0">Carburant</h5>
+            </div>
+            <div class="d-flex align-items-center mb-4">
+              <div class="form-group mb-0 flex-grow-1">
+                <div class="custom-border">
+                  <div class="form-check form-check-inline cadre-gris back" [class.selected]="selectedCarburant === 'Essence'" (click)="selectRadioCarburant('Essence')">
+                    <input class="form-check-input" type="radio" name="carburant" id="essenceRadio" value="Essence" [(ngModel)]="selectedCarburant">
+                    <label class="form-check-label radio-label" for="essenceRadio">Essence</label>
+                  </div>
+                  <div class="form-check form-check-inline cadre-gris back" [class.selected]="selectedCarburant === 'Diesel'" (click)="selectRadioCarburant('Diesel')">
+                    <input class="form-check-input" type="radio" name="carburant" id="dieselRadio" value="Diesel"  [(ngModel)]="selectedCarburant">
+                    <label class="form-check-label radio-label" for="dieselRadio">DIESEL</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Boîte de vitesses -->
+            <div class="d-flex align-items-center space-between mb-4">
+              <h5 class="mb-0">Boîte de vitesses</h5>
+            </div>
+            <div class="d-flex align-items-center">
+              <div class="form-group mb-0 flex-grow-1">
+                <div class="custom-border">
+                  <div class="form-check form-check-inline cadre-gris form-check2" [class.selected]="selectedBoite === 'Automatique'" (click)="selectRadioBoite('Automatique')">
+                    <input class="form-check-input" type="radio" name="boite" id="autoRadio" value="Automatique" [(ngModel)]="selectedBoite">
+                    <label class="form-check-label radio-label" for="autoRadio">AUTOMATIQUE</label>
+                  </div>
+                  <div class="form-check form-check-inline cadre-gris form-check2" [class.selected]="selectedBoite === 'Manuelle'" (click)="selectRadioBoite('Manuelle')">
+                    <input class="form-check-input" type="radio" name="boite" id="manuelRadio" value="Manuelle" [(ngModel)]="selectedBoite">
+                    <label class="form-check-label radio-label" for="manuelRadio">MANUELLE</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="espace"></div>
+      
+            <app-precedent [previousRoute]="'card3'" [nextRoute]="'card5'"></app-precedent>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

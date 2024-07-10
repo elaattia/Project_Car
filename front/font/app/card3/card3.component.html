@@ -1,0 +1,39 @@
+
+<div class=" margin container-fluid bg-white ">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-lg-8 col-md-10">
+      <div class="card p-4 card-container">
+        <div class="card-body text-center card-content">
+          <div class="text-center mb-5">
+            <h1 class="card-title mb-0">Identification</h1>
+          </div>
+          <div class="d-flex align-items-center space-between">
+            <h5 class="mb-0">Marque</h5> <!-- Ajout de la classe space-between -->
+            <div class="mr-4"></div> <!-- Espace ajouté après le mot "Marque" -->
+            <div class="form-group mb-0 flex-grow-1">
+              <select class="form-control" id="marque" (change)="onMarqueChange()" [(ngModel)]="marqueSelect">
+                <option value="">Sélectionner une marque</option>
+                <option *ngFor="let item of marquesEtModeles" [value]="item.marque">{{ item.marque }}</option>
+              </select>
+            </div>
+          </div>
+          <div *ngIf="modelesAffiches.length > 0">
+            <div class="d-flex align-items-center space-between mb-4">
+              <h5 class="mb-0">Modèles</h5>
+              <div class="mr-4"></div>
+              <div class="form-group mb-0 flex-grow-1">
+                <select class="form-control" id="modele" (change)="onModeleChange()" [(ngModel)]="modeleSelect">
+                  <option *ngFor="let modele of modelesAffiches" [value]="modele">{{ modele }}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          
+          
+          
+          <app-precedent [previousRoute]="'card2'" [nextRoute]="getNextRoute() "  ></app-precedent>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

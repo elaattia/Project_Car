@@ -1,0 +1,93 @@
+
+  
+
+  <div class="margin container-fluid bg-white">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-8 col-md-10">
+        <div class="card p-4 card-container">
+          <div class="card-body text-center card-content">
+            <div class="text-center mb-5">
+              <h1 class="card-title mb-0">État du véhicule</h1>
+            </div>
+            
+            <div class="d-flex align-items-center space-between mb-4">
+              <h5 class="mb-0">État des pneus avant</h5>
+            </div>
+            
+            <div class="d-flex align-items-center">
+              <div class="form-group mb-0 flex-grow-1">
+                <div class="custom-border">
+                  <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedavant === 'Excellent'" (click)="selectRadioavant('Excellent')">
+                    <input class="form-check-input" type="radio" name="pneusavant" id="autoRadio" value="Excellent" [(ngModel)]="selectedavant">
+                    <label class="form-check-label radio-label" for="autoRadio">Excellent</label>
+                  </div>
+                  <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedavant === 'Bon'" (click)="selectRadioavant('Bon')">
+                    <input class="form-check-input" type="radio" name="pneusavant" id="manuelRadio" value="Bon" [(ngModel)]="selectedavant">
+                    <label class="form-check-label radio-label" for="manuelRadio">Bon</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="espace"></div>
+            <div class="d-flex align-items-center">
+              <div class="form-group mb-0 flex-grow-1">
+                <div class="custom-border">
+                  <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedavant === 'Moyen'" (click)="selectRadioavant('Moyen')">
+                    <input class="form-check-input" type="radio" name="pneusavant" id="autoRadio" value="Moyen" [(ngModel)]="selectedavant">
+                    <label class="form-check-label radio-label" for="autoRadio">Moyen</label>
+                  </div>
+                  <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedavant === 'A changer'" (click)="selectRadioavant('A changer')">
+                    <input class="form-check-input" type="radio" name="pneusavant" id="manuelRadio" value="A changer" [(ngModel)]="selectedavant">
+                    <label class="form-check-label radio-label" for="manuelRadio">A changer</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            
+            <div class="espace"></div>
+            <div class="d-flex align-items-center space-between mb-4">
+              <h5 class="mb-0">État des pneus arrière</h5>
+            </div>
+            
+            <div class="d-flex align-items-center">
+              <div class="form-group mb-0 flex-grow-1">
+                <div class="custom-border">
+                  <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedarriere === 'Excellent'" (click)="selectRadioarriere('Excellent')">
+                    <input class="form-check-input" type="radio" name="pneusarriere" id="autoRadio" value="Excellent" [(ngModel)]="selectedarriere">
+                    <label class="form-check-label radio-label" for="autoRadio">Excellent</label>
+                  </div>
+                  <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedarriere === 'Bon'" (click)="selectRadioarriere('Bon')">
+                    <input class="form-check-input" type="radio" name="pneusarriere" id="manuelRadio" value="Bon" [(ngModel)]="selectedarriere">
+                    <label class="form-check-label radio-label" for="manuelRadio">Bon</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="espace"></div>
+            <div class="d-flex align-items-center">
+              <div class="form-group mb-0 flex-grow-1">
+                <div class="custom-border">
+                  <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedarriere === 'Moyen'" (click)="selectRadioarriere('Moyen')">
+                    <input class="form-check-input" type="radio" name="pneusarriere" id="autoRadio" value="Moyen" [(ngModel)]="selectedarriere">
+                    <label class="form-check-label radio-label" for="autoRadio">Moyen</label>
+                  </div>
+                  <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedarriere === 'A changer'" (click)="selectRadioarriere('A changer')">
+                    <input class="form-check-input" type="radio" name="pneusarriere" id="manuelRadio" value="A changer" [(ngModel)]="selectedarriere">
+                    <label class="form-check-label radio-label" for="manuelRadio">A changer</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="espace"></div>
+      
+            <div class="text-center">
+                <app-precedent [previousRoute]="'card10v3'" [nextRoute]="'card12v3'"></app-precedent>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

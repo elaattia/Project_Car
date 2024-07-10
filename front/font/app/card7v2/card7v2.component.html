@@ -1,0 +1,92 @@
+
+
+
+
+<div class="margin container-fluid bg-white">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-lg-8 col-md-10">
+      <div class="card p-4 card-container">
+        <div class="card-body text-center card-content">
+          <div class="text-center mb-5">
+            <h1 class="card-title mb-0">État du véhicule</h1>
+          </div>
+          
+          <div class="d-flex align-items-center space-between mb-4">
+            <h5 class="mb-0">Consommation Huile </h5>
+          </div>
+          
+          <div class="d-flex align-items-center">
+            <div class="form-group mb-0 flex-grow-1">
+              <div class="custom-border">
+                <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedConsommation === 'Consommation normale'" (click)="selectRadioConsommation('Consommation normale')">
+                  <input class="form-check-input" type="radio" name="Consommation" id="Consommation normale" value="Consommation normale" [(ngModel)]="selectedConsommation">
+                  <label class="form-check-label radio-label" for="Consommation normale">Consommation normale</label>
+                </div>
+                <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedConsommation === 'Consommation modérée'" (click)="selectRadioConsommation('Consommation modérée')">
+                  <input class="form-check-input" type="radio" name="Consommation" id="Consommation modérée" value="Consommation modérée" [(ngModel)]="selectedConsommation">
+                  <label class="form-check-label radio-label" for="Consommation modérée">Consommation modérée</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="espace"></div>
+          <div class="d-flex align-items-center">
+            <div class="form-group mb-0 flex-grow-1">
+              <div class="custom-border">
+                <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedConsommation === 'Consommation excessive'" (click)="selectRadioConsommation('Consommation excessive')">
+                  <input class="form-check-input" type="radio" name="Consommation" id="Consommation excessive" value="Consommation excessive" [(ngModel)]="selectedConsommation">
+                  <label class="form-check-label radio-label" for="Consommation excessive">Consommation excessive</label>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="espace"></div>
+          
+          
+          <div class="d-flex align-items-center space-between mb-4">
+            <h5 class="mb-0">Historique d'entretien </h5>
+          </div>
+          
+          <div class="d-flex align-items-center">
+            <div class="form-group mb-0 flex-grow-1">
+              <div class="custom-border">
+                <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedHistorique === 'Entretien régulier maison'" (click)="selectRadioHistorique('Entretien régulier maison')">
+                  <input class="form-check-input" type="radio" name="entretien" id="Entretien régulier maison" value="Entretien régulier maison" [(ngModel)]="selectedHistorique">
+                  <label class="form-check-label radio-label" for="Entretien régulier maison">Entretien régulier maison</label>
+                </div>
+                <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedHistorique === 'Entretien régulier'" (click)="selectRadioHistorique('Entretien régulier')">
+                  <input class="form-check-input" type="radio" name="entretien" id="Entretien régulier" value="Entretien régulier" [(ngModel)]="selectedHistorique">
+                  <label class="form-check-label radio-label" for="Entretien régulier">Entretien régulier</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="espace"></div>
+          <div class="d-flex align-items-center">
+            <div class="form-group mb-0 flex-grow-1">
+              <div class="custom-border">
+                <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedHistorique === 'Entretien irrégulier'" (click)="selectRadioHistorique('Entretien irrégulier')">
+                  <input class="form-check-input" type="radio" name="entretien" id="Entretien irrégulier" value="Entretien irrégulier" [(ngModel)]="selectedHistorique">
+                  <label class="form-check-label radio-label" for="Entretien irrégulier">Entretien irrégulier</label>
+                </div>
+                <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedHistorique === 'Aucun entretien documenté'" (click)="selectRadioHistorique('Aucun entretien documenté')">
+                  <input class="form-check-input" type="radio" name="entretien" id="Aucun entretien documenté" value="Aucun entretien documenté" [(ngModel)]="selectedHistorique">
+                  <label class="form-check-label radio-label" for="Aucun entretien documenté">Aucun entretien documenté</label>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+    
+          <div class="espace"></div>
+    
+          <div class="text-center">
+            <app-precedent [previousRoute]="'card6v2'" [nextRoute]="'card8v2'"></app-precedent>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,76 @@
+
+
+
+<div class="margin container-fluid bg-white">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-lg-8 col-md-10">
+      <div class="card p-4 card-container">
+        <div class="card-body text-center card-content">
+          <div class="text-center mb-5">
+            <h1 class="card-title mb-0">État du véhicule</h1>
+          </div>
+          
+          <div class="d-flex align-items-center space-between mb-4">
+            <h5 class="mb-0">La voiture appartient à un particulier ou une entreprise ?</h5>
+          </div>
+          
+          <div class="d-flex align-items-center">
+            <div class="form-group mb-0 flex-grow-1">
+              <div class="custom-border">
+                <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedappartient === 'Particulier'" (click)="selectRadioappartient('Particulier')">
+                  <input class="form-check-input" type="radio" name="voitureappartient" id="Particulier" value="Particulier" [(ngModel)]="selectedappartient">
+                  <label class="form-check-label radio-label" for="Particulier">Particulier</label>
+                </div>
+                <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedappartient === 'Entreprise'" (click)="selectRadioappartient('Entreprise')">
+                  <input class="form-check-input" type="radio" name="voitureappartient" id="Entreprise" value="Entreprise" [(ngModel)]="selectedappartient">
+                  <label class="form-check-label radio-label" for="Entreprise">Entreprise</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="espace"></div>
+          <div class="d-flex align-items-center space-between mb-4">
+            <h5 class="mb-0">Quelle était l'utilisation précédente de la voiture ?</h5>
+          </div>
+          
+          <div class="d-flex align-items-center">
+            <div class="form-group mb-0 flex-grow-1">
+              <div class="custom-border">
+                <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedutilisation === 'Utilisation personnelle'" (click)="selectRadioutilisation('Utilisation personnelle')">
+                  <input class="form-check-input" type="radio" name="Utilisationprecedente" id="Utilisation personnelle" value="Utilisation personnelle" [(ngModel)]="selectedutilisation">
+                  <label class="form-check-label radio-label" for="Utilisation personnelle">Utilisation personnelle</label>
+                </div>
+                <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedutilisation === 'Location'" (click)="selectRadioutilisation('Location')">
+                  <input class="form-check-input" type="radio" name="Utilisationprecedente" id="Location" value="Location" [(ngModel)]="selectedutilisation">
+                  <label class="form-check-label radio-label" for="Location">Location</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="espace"></div>
+          <div class="d-flex align-items-center">
+            <div class="form-group mb-0 flex-grow-1">
+              <div class="custom-border">
+                <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedutilisation === 'Taxi'" (click)="selectRadioutilisation('Taxi')">
+                  <input class="form-check-input" type="radio" name="Utilisation" id="Taxi" value="Taxi" [(ngModel)]="selectedutilisation">
+                  <label class="form-check-label radio-label" for="Taxi">Taxi</label>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+    
+          
+          
+          
+    
+          <div class="espace"></div>
+    
+          <div class="text-center">
+           <app-precedent [previousRoute]="'card16v3'" [nextRoute]="'card18v3'"></app-precedent>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

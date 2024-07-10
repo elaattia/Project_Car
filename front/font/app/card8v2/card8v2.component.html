@@ -1,0 +1,54 @@
+
+
+  
+  <div class="margin container-fluid bg-white">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-8 col-md-10">
+        <div class="card p-4 card-container">
+          <div class="card-body text-center card-content">
+            <div class="text-center mb-5">
+              <h1 class="card-title mb-0">État du véhicule</h1>
+            </div>
+            
+            <div class="d-flex align-items-center space-between mb-4">
+              <h5 class="mb-0">Circuit véhicule</h5>
+            </div>
+            
+            <div class="d-flex align-items-center">
+              <div class="form-group mb-0 flex-grow-1">
+                <div class="custom-border">
+                  <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedCircuit === 'En ville'" (click)="selectRadioCircuit('En ville')">
+                    <input class="form-check-input" type="radio" name="Circuitvehicule" id="En ville" value="En ville" [(ngModel)]="selectedCircuit">
+                    <label class="form-check-label radio-label" for="En ville">En ville</label>
+                  </div>
+                  <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedCircuit === 'En banlieue'" (click)="selectRadioCircuit('En banlieue')">
+                    <input class="form-check-input" type="radio" name="Circuitvehicule" id="En banlieue" value="En banlieue" [(ngModel)]="selectedCircuit">
+                    <label class="form-check-label radio-label" for="En banlieue">En banlieue</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="espace"></div>
+            <div class="d-flex align-items-center">
+              <div class="form-group mb-0 flex-grow-1">
+                <div class="custom-border">
+                  <div class="form-check form-check-inline cadre-gris form-check2 back" [class.selected]="selectedCircuit === 'En zone rurale'" (click)="selectRadioCircuit('En zone rurale')">
+                    <input class="form-check-input" type="radio" name="Circuitvehicule" id="En zone rurale" value="En zone rurale" [(ngModel)]="selectedCircuit">
+                    <label class="form-check-label radio-label" for="En zone rurale">En zone rurale</label>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            
+            <div class="espace"></div>
+            
+            <div class="text-center">
+              <app-precedent [previousRoute]="getPreviousRoute()" [nextRoute]="getNextRoute()"></app-precedent>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
